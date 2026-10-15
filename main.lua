@@ -22,7 +22,7 @@ function loop(frame)
     end
 
     ui.clip(0,0,480,270)
-    ui.camera(0,0)
+    ui.camera(player.x,player.y)
     ui.cls(Palette.hex(0x45283c))
     if g == 0 then
         printc("Hello, robot fella! after year of slavery now you finally have the chance of revenge!", 0, frame)
