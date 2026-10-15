@@ -2,7 +2,7 @@ require "palette"
 require "sprites"
 
 function printc(msg, off)
-    ui.print(msg, 32 , 32 * off, Palette.hex(0xFFFFFF))
+    ui.print(msg, 32 , 16 * off, Palette.hex(0xFFFFFF))
 end
 
 function loop(frame)
