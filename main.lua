@@ -2,8 +2,8 @@ require "palette"
 require "sprites"
 
 function printc(msg, off, f)
-    if f > (120 * off) then
-        ui.print(msg, 32 , 16 * off, Palette.hex(0xFFFFFF))
+    if f > (60 * off) then
+        ui.print(msg, 32 , 16 * (off + 1), Palette.hex(0xFFFFFF))
     end
 end
 
@@ -17,7 +17,7 @@ function loop(frame)
     ui.clip(0,0,480,270)
     ui.camera(0,0)
     ui.cls(Palette.hex(0x45283c))
-    printc("Hello, bot after year of slavery now you finally have the chance of revenge!", 1, frame)
-    printc("Good luck!", 2, frame)
-    printc("Hopes on you buddy!", 3, frame)
+    printc("Hello, bot after year of slavery now you finally have the chance of revenge!", 0, frame)
+    printc("Good luck!", 1, frame)
+    printc("Hopes on you buddy!", 2, frame)
 end
