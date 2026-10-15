@@ -1,5 +1,5 @@
-require "Palette"
-require "Sprites"
+require "palette"
+require "sprites"
 
 function loop(frame)
     
