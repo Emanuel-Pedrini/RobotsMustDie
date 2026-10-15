@@ -1,6 +1,7 @@
 require "palette"
 require "sprites"
 
+player = {x = 0, y = 0}
 g = 0
 function printc(msg, off, f)
     if f > (60 * off) then
@@ -28,6 +29,10 @@ function loop(frame)
         printc("", 3, frame)
     end
     if g == 1 then
-        ui.print("Hello, bruh", 32 , 16, Palette.hex(0xFFFFFF))
+        main_state()
     end
+end
+
+function main_state()
+    ui.tile(Sprites.TilemapLupi, 0, player.x, player.y)
 end
