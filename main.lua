@@ -1,10 +1,15 @@
 require "palette"
 require "sprites"
 
-c = 1
-function printc(msg)
-    ui.print(msg, 32, 32 * c, Palette.hex(0xFFFFFF))
-    c=c+1
+player = {x = 0, y = 0}
+g = 0
+function printc(msg, off, f)
+    if f > (60 * off) then
+        ui.print(msg, 32 , 16 * (off + 1), Palette.hex(0xFFFFFF))
+        if off == 3 then
+            g = g + 1
+        end
+    end
 end
 
 function loop(frame)
@@ -17,5 +22,17 @@ function loop(frame)
     ui.clip(0,0,480,270)
     ui.camera(0,0)
     ui.cls(Palette.hex(0x45283c))
-    printc("ai aia ia ia")
+    if g == 0 then
+        printc("Hello, bot after year of slavery now you finally have the chance of revenge!", 0, frame)
+        printc("Good luck!", 1, frame)
+        printc("Hopes on you buddy!", 2, frame)
+        printc("", 3, frame)
+    end
+    if g == 1 then
+        main_state()
+    end
+end
+
+function main_state()
+    ui.tile(Sprites.TilemapLupi, 0, player.x, player.y)
 end
