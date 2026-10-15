@@ -1,10 +1,8 @@
 require "palette"
 require "sprites"
 
-c = 1
-function printc(msg)
-    ui.print(msg, 32, 32 * c, Palette.hex(0xFFFFFF))
-    c=c+1
+function printc(msg, off)
+    ui.print(msg, 32 , 32 * off, Palette.hex(0xFFFFFF))
 end
 
 function loop(frame)
@@ -17,5 +15,7 @@ function loop(frame)
     ui.clip(0,0,480,270)
     ui.camera(0,0)
     ui.cls(Palette.hex(0x45283c))
-    printc("hello, world!")
+    printc("Hello, bot after year of slavery now you finally have the chance of revenge!", 1)
+    printc("Good luck!", 2)
+    printc("Hopes on you buddy!", 3)
 end
