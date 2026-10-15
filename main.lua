@@ -1,9 +1,9 @@
 require "palette"
 require "sprites"
 
-cc = 1
+c = 1
 function printc(msg)
-    ui.print(msg, 32, 32 * cc, Palette.hex(0xFFFFFF))
+    ui.print(msg, 32, 32 * c, Palette.hex(0xFFFFFF))
     c=c+1
 end
 
