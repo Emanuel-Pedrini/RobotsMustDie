@@ -40,5 +40,5 @@ function main_state()
     if ui.btn(UP) then player.y = player.y - sp end
 
     if ui.btn(LEFT) then player.x = player.x - sp end
-    if ui.btn(RIGHT) then player.x = player.x + s end
+    if ui.btn(RIGHT) then player.x = player.x + sp end
 end
