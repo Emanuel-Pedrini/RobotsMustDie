@@ -51,7 +51,8 @@ function main_state()
         sx = true
     end
     if ui.btn(RIGHT) then 
-        player.x = player.x + sp 
+        player.x = player.x + sp
+        sx = false
     end
     ui.tile(Sprites.TilemapLupi, 0, player.x, player.y, sx)
 end
