@@ -11,9 +11,7 @@ function loop(frame)
     ui.clip(0,0,480,270)
     ui.camera(0,0)
     ui.cls(Palette.hex(0x45283c))
-    i = 0
-    while i < 10 do
-        ui.print("Hello, bot!", 32, 32, Palette.hex(0xFFFFFF))
-        i=i+1
-    end
+    ui.print("Hello, bot!", 32, 32, Palette.hex(0xFFFFFF))
+    ui.print("Hello, bot2!", 32, 32, Palette.hex(0xFFFFFF))
+    ui.print("Hello, bot3FUCK!", 32, 32, Palette.hex(0xFFFFFF))
 end 
