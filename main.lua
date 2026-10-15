@@ -23,7 +23,7 @@ function loop(frame)
     ui.camera(0,0)
     ui.cls(Palette.hex(0x45283c))
     if g == 0 then
-        printc("Hello, bot after year of slavery now you finally have the chance of revenge!", 0, frame)
+        printc("Hello, robot fella! after year of slavery now you finally have the chance of revenge!", 0, frame)
         printc("Good luck!", 1, frame)
         printc("Hopes on you buddy!", 2, frame)
         printc("", 3, frame)
