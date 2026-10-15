@@ -2,6 +2,7 @@ require "palette"
 require "sprites"
 
 player = {x = 0, y = 0}
+sp = 5
 g = 0
 function printc(msg, off, f)
     if f > (60 * off) then
@@ -35,9 +36,9 @@ end
 
 function main_state()
     ui.tile(Sprites.TilemapLupi, 0, player.x, player.y)
-    if ui.btn(DOWN) then player.y = player.y - 2 end
-    if ui.btn(UP) then player.y = player.y + 2 end
+    if ui.btn(DOWN) then player.y = player.y + sp end
+    if ui.btn(UP) then player.y = player.y - sp end
 
-    if ui.btn(LEFT) then player.x = player.x - 2 end
-    if ui.btn(RIGHT) then player.x = player.x + 2 end
+    if ui.btn(LEFT) then player.x = player.x - sp end
+    if ui.btn(RIGHT) then player.x = player.x + s end
 end
