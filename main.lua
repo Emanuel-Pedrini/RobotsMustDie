@@ -55,4 +55,5 @@ function main_state()
         sx = false
     end
     ui.tile(Sprites.TilemapLupi, 0, player.x, player.y, sx)
+    -- X
 end
