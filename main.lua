@@ -5,7 +5,7 @@ player = {x = 0, y = 0}
 g = 0
 function printc(msg, off, f)
     if f > (60 * off) then
-        ui.print(msg, 32 , 16 * (off + 1), Palette.hex(0xFFFFFF))
+        ui.print(msg, 16 , 16 * (off + 1), Palette.hex(0xFFFFFF))
         if off == 3 then
             g = g + 1
         end
