@@ -17,5 +17,5 @@ function loop(frame)
     ui.clip(0,0,480,270)
     ui.camera(0,0)
     ui.cls(Palette.hex(0x45283c))
-    printc("hello, world!")
+    printc("ai aia ia ia")
 end
