@@ -3,6 +3,7 @@ require "sprites"
 
 player = {x = 0, y = 0}
 sp = 5
+st = 1
 g = 0
 function printc(msg, off, f)
     if f > (60 * off) then
@@ -35,10 +36,22 @@ function loop(frame)
 end
 
 function main_state()
-    ui.tile(Sprites.TilemapLupi, 0, player.x, player.y)
-    if ui.btn(DOWN) then player.y = player.y + sp end
-    if ui.btn(UP) then player.y = player.y - sp end
+    local sx = false
+    if ui.btn(DOWN) then 
+        player.y = player.y + sp
+        sx = 0
+    end
+    if ui.btn(UP) then 
+        player.y = player.y - sp 
 
-    if ui.btn(LEFT) then player.x = player.x - sp end
-    if ui.btn(RIGHT) then player.x = player.x + sp end
+    end
+
+    if ui.btn(LEFT) then 
+        player.x = player.x - sp
+        sx = true
+    end
+    if ui.btn(RIGHT) then 
+        player.x = player.x + sp 
+    end
+    ui.tile(Sprites.TilemapLupi, 0, player.x, player.y, sx)
 end
